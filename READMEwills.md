@@ -6,15 +6,21 @@
 2. Name the collection
 3. Click on "Upload Document"
 4. Click on "Quick Test Recognition"
-5. Click "Handwritten" 
-6. Then choose a language: "English"
-7. Click on the search bar (choose your collection)
-8. Open your "File Explorer"
-9. Choose image
-10. Lastly, drag or drop your chosen image
+5. Click "Handwritten"
+7. Then choose a language: "English"
+8. Click on the search bar (choose your collection)
+9. Open your "File Explorer" on your PC
+10. Choose image from there
+11. Lastly, drag or drop your chosen image
+12. Let image transcribe.
+
+### Once Transription is finished:
+
+13. Click on the finish product of the image thumbnail
+14. Read and validate transcription
 
 
-### Last Will and Testament of Isabell Midford
+## Last Will and Testament of Isabell Midford
 1706/ M.11
 
 nthe name of (God Ilmen
