@@ -95,12 +95,78 @@ John Brown
 Margaret Muggrave
 
 
+
+
+
 ## TRANSKRIBUS API
 
-import json
-import https://transkribus.eu/TrpServerTesting/rest/uploads?collId={collectionID}
+
+### Task 1: Return user information and session ID 
+
+##LOGIN TO Transkribus
+
 import requests
-import re
-import os
+
+r = requests.post {'https://transkribus.eu/TrpServer/rest/auth/login', data ='user':'m-hutson@outlook.com', 'pw': DEK.AdnzL_2-Gjv}
+
+print(r.text)
+
+r.status_code
 
 
+### Task 2: Upload image to API using session ID. This session ID was generated from the previous code.
+
+##List of collections
+
+sessionID = {'JSESSIONID': ''}
+
+r = requests.get('https://transkribus.eu/TrpServer/rest/collecctions/list', params= sessionID)
+
+print(r.text)
+
+
+### Task 3: Document details from te collection
+
+metadata = {
+    
+  'nd': {
+        'title': 'default',
+        "author": "default",
+        "genre": "default",
+        "writer": "default"
+  },
+  'pagelist':{
+      'pages':[
+          {
+            'filename': 'R.jpg',
+            'pageNr':1,
+          }
+      ]
+  }
+}
+
+r = requests.post('https://transkribus', params= sessionID, json= metadata)
+
+print(r.text)
+
+
+### Task 4: Import files from google collab
+
+from google.colab import files
+
+files = {"img" : open('R.jpg','rb')}
+
+r = requests.put('https://', files= files, params= sessionID)
+
+print(r.text)
+
+
+### Task 5 and 6: Get documents
+
+r = requests.get('https://transkribus.eu', params= sessionID)
+
+print(r.text)
+
+r = requests.get('https://transkribus.eu', params= sessionID)
+
+print(r.text)
