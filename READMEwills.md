@@ -93,3 +93,14 @@ Mt: Musgeare
 Dabel Mitford
 John Brown
 Margaret Muggrave
+
+
+## TRANSKRIBUS API
+
+import json
+import https://transkribus.eu/TrpServerTesting/rest/uploads?collId={collectionID}
+import requests
+import re
+import os
+
+
